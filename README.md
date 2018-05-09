@@ -9,6 +9,7 @@ The Python script can communicate with **'Loadbox'**, **Ford SYNC TDK module** t
 ![System Diagram](system-diagram.png)
 
 ## Python
+Since the whole CAN DataBase is not provided, however, a simple 'python.dbc' database is provided in folder **CANalyzer config and CAPL functions**. Run 'canalyzer_test.py' to see how it works.
 ### Main Scripts
 1. **automation_gui.py**
 Main GUI thread. Users can select serial port, type in scripts and start automation.
@@ -30,12 +31,14 @@ Save CAN signals from CANalyzer through COM library.
 1. **test.cfg**
 CANalyzer configuration used for communication with Python and calling CAPL function from Python.
 2. **call_capl_function.can**
-It's a CAPL script that is designed for automation test cases and it can be called from Python. A CAN Database is not included due to privacy.
+It's a CAPL script that is designed for automation test cases and it can be called from Python. 
+3. **python.dbc**
+A simple CAN Database. Only contains one message and one signal. 
 
 	
 ## Arduino
 1. **FullBoard-TimerOne.ino**
-Arduino code designed for PCB board which is not included due to privacy.
+Arduino code designed for a PCB board.
 2. **Board API.docx**
 Board APIs that can be called from external applications.
 3. **FullBoardDriver.exe**
