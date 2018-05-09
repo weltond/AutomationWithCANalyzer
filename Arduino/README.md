@@ -28,3 +28,4 @@ This sketch has been fully tested with "FullBoardDriver.exe", a VisualBaisc Form
 applicaiton, to demonstrate what a well-fomred command looks like and how the 
 arduino communicates back to the driver program. It also shows the error checking
 that is required to form a command to ensure the system works properly. 
+![Arduino Test GUI](arduino-gui.png)
