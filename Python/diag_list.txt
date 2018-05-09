@@ -1,0 +1,1411 @@
+switch_dtc = {'GROUND': r'916D11', 'OPEN': r'916D13', 'VBATT': r'916D13', 'PRESS': r'916D9E'}
+indicator_dtc = {'VBATT': r'92B712', 'GROUND': r'92B711', 'OPEN': r'92B712'}
+mic_dtc = {'OPEN': r'9D7913', 'VBATT': r'9D7912', 'GROUND': r'9D7911'}
+ens_dtc = {'Not Used 1': r'C45200', 'Not Used 2': r'C45200', 'Not Used 3': r'C45200',
+           'Not Used 4': r'C45200', 'Not Used 5': r'C45200', 'DIS RCM': r'C15100',
+           'PASS THROUGH': r'91D824', 'GROUND': r'91D823'}
+
+2018-03-28_12-46-53:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92b711
+2018-03-28_12-54-58:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> Has FAULT in the end. FAIL
+2018-03-28_12-58-22:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> More than 1 DTC found, will be implemented later.More than 1 DTC found, will be implemented later.Has FAULT in the end. FAIL
+2018-03-28_14-57-02:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 2 DTCs found. 1. Active DTC: 916d13L	2. Active DTC: 92b711Has FAULT in the end. FAIL
+2018-03-28_15-03-18:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92b711
+ No FAULT in the end. PASS
+2018-03-28_15-56-21:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+2018-03-28_16-00-41:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OKPASS
+2018-03-28_16-16-54:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-28_16-19-48:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D14', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - NOT FOUND DTC
+2018-03-28_16-32-22:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_09-34-59:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_09-58-39:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-00-18:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-01-56:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-06-44:
+ Please make sure create a NO FAULT system before testing
+2018-03-29_10-07-06:
+ Please make sure create a NO FAULT system before testing
+2018-03-29_10-07-27:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 947716 - NOT FOUND DTC
+ FAIL
+2018-03-29_10-09-07:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-26-47:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-28-27:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-39-15:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-42-16:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-43-58:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_10-45-40:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_10-47-23:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-05-07:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-06-50:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-16-59:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-18-41:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-20-23:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-22-05:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-23-48:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-25-30:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-27-12:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-28-54:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-30-36:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-32-18:
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_11-34-01:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-35-43:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-37-25:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-39-07:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-40-49:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-42-31:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-44-14:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-45-56:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-47-38:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_11-49-20:
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_13-10-38: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_13-12-20: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ PASS
+2018-03-29_13-14-02: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_13-15-44: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ PASS
+2018-03-29_13-30-21: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D133', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - NOT FOUND DTC
+ ======FAIL======
+2018-03-29_13-32-03: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+2018-03-29_13-58-57: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-03-29_14-00-39: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-03-29_14-04-57: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-03-29_14-06-39: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-12_11-12-26: Log_1
+ Left Speaker DTC List: 
+ Right Speaker DTC List: 
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 
+2018-04-12_14-02-33: Log_1
+ Left Speaker DTC List: 
+ Right Speaker DTC List: 
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 
+2018-04-12_14-33-34: Log_1
+ Left Speaker DTC List: {'OPEN': '9A0113', 'VBATT': '9A0112', 'LeadToLead': '9A011E', 'GROUND': '9A0111'}
+ Right Speaker DTC List: {'OPEN': '9A0213', 'VBATT': '9A0212', 'LeadToLead': '9A021E', 'GROUND': '9A0211'}
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 
+2018-04-13_11-09-23: Log_1
+ Left Speaker DTC List: {'OPEN': '9A0113', 'VBATT': '9A0112', 'LeadToLead': '9A011E', 'GROUND': '9A0111'}
+ Right Speaker DTC List: {'OPEN': '9A0213', 'VBATT': '9A0212', 'LeadToLead': '9A021E', 'GROUND': '9A0211'}
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 2 DTCs found. 1. Active DTC: 9A0113	2. Active DTC: 9A0213 - NOT FOUND ALL DTCsFAULT NOT CLEARED. FAIL
+2018-04-13_12-46-12: Log_1
+ Left Speaker DTC List: {'OPEN': '9A0113', 'VBATT': '9A0112', 'LeadToLead': '9A011E', 'GROUND': '9A0111'}
+ Right Speaker DTC List: {'OPEN': '9A0213', 'VBATT': '9A0212', 'LeadToLead': '9A021E', 'GROUND': '9A0211'}
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 2 DTCs found. 1. Active DTC: 9A0113	2. Active DTC: 9A0213 - NOT FOUND ALL DTCs	FAULT NOT CLEARED. FAIL	
+2018-04-13_15-23-47: Log_1
+ Left Speaker DTC List: {'OPEN': '9A0113', 'VBATT': '9A0112', 'LeadToLead': '9A011E', 'GROUND': '9A0111'}
+ Right Speaker DTC List: {'OPEN': '9A0213', 'VBATT': '9A0212', 'LeadToLead': '9A021E', 'GROUND': '9A0211'}
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 
+ ===== Fail to read DTC ======
+
+2018-04-22_10-13-08: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-22_10-25-01: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-22_10-39-37: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-23_09-41-32: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-07-20: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-14-49: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-17-42: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-20-41: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-22-48: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-41-46: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-42-27: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-42-53: Log_2
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-50-08: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-50-34: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-55-41: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_09-56-07: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_11-22-51: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-04-24_11-25-47: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_11-27-00: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_12-16-56: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_12-23-30: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_12-28-58: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_12-38-15: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_12-41-04: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_12-43-27: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_12-49-59: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_13-17-49: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_13-20-15: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_13-56-06: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_13-58-32: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_14-53-56: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_14-58-15: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_15-03-43: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_15-06-12: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - NOT FOUND DTC
+2018-04-24_15-08-38: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D119'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_15-27-55: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_15-30-21: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_15-32-47: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_15-35-13: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-24_15-37-39: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-24_15-40-05: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_15-47-02: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_15-49-08: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_16-13-48: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_16-15-55: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-24_16-20-49: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_16-40-56: Log_1
+ Please make sure create a NO FAULT system before testing
+2018-04-24_16-42-00: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_16-44-06: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_16-46-12: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_16-48-18: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_16-50-24: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-24_16-52-31: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_16-54-37: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_16-56-43: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_16-58-49: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_17-00-55: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_17-03-01: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_17-05-08: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_17-07-14: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_17-09-20: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_17-11-26: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-24_17-13-32: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-24_17-15-39: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-24_17-17-45: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-24_17-19-51: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-24_17-21-57: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-24_17-24-03: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 947713 - NOT FOUND DTC
+2018-04-24_17-26-10: Log_2
+ Please make sure create a NO FAULT system before testing
+2018-04-24_17-26-39: Log_3
+ Please make sure create a NO FAULT system before testing
+2018-04-24_17-27-08: Log_4
+ Please make sure create a NO FAULT system before testing
+2018-04-24_17-27-37: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-04-24_17-29-43: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-24_17-31-49: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-24_17-33-56: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-24_17-36-02: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-24_17-38-08: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_09-03-39: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_09-04-08: Log_2
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_09-04-37: Log_3
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_09-08-15: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_09-08-45: Log_2
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_09-09-15: Log_3
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_09-16-46: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_09-19-36: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-04-25_09-21-42: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-04-25_09-23-49: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-04-25_09-25-55: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-04-25_09-28-01: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-04-25_09-30-07: Log_6
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-04-25_09-49-52: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+
+2018-04-25_12-59-41: Log_1
+ Left Speaker DTC List: {'OPEN': '9A0113', 'VBATT': '9A0112', 'LeadToLead': '9A011E', 'GROUND': '9A0111'}
+ Right Speaker DTC List: {'OPEN': '9A0213', 'VBATT': '9A0212', 'LeadToLead': '9A021E', 'GROUND': '9A0211'}
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 
+ ===== Fail to read DTC ======
+After clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cyclesAfter clear fault, Spkr Diag happens after 3 cycles
+2018-04-25_14-51-49: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 2 DTCs found. 1. In History but Actively Passing DTC: C15100	2. Active DTC: 916D13 - SOMETHING WRONG
+2018-04-25_14-53-55: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_14-56-01: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-25_15-47-47: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 
+2018-04-25_16-06-55: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> nullNOT FOUND DTC
+2018-04-25_16-33-28: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> No fault observed
+2018-04-25_16-35-35: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-25_16-37-41: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-25_16-39-47: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-25_16-41-53: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-25_16-43-59: Log_6
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-25_16-46-06: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-25_16-48-12: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-25_16-50-18: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-25_16-52-25: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-25_16-54-31: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-25_16-56-37: Log_6
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-25_16-58-43: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-25_17-00-49: Log_2
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-25_17-02-56: Log_3
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-25_17-05-02: Log_4
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-25_17-07-08: Log_5
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-25_17-09-14: Log_6
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-25_17-11-20: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-13-27: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-15-33: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-17-39: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-19-45: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-21-51: Log_6
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-23-58: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_17-26-04: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_17-28-10: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_17-30-16: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_17-32-23: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_17-34-29: Log_6
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_17-36-35: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-25_17-38-41: Log_2
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-25_17-40-47: Log_3
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-25_17-42-54: Log_4
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-25_17-45-00: Log_5
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-25_17-47-06: Log_6
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-25_17-49-12: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-51-18: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-53-25: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-55-31: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-57-37: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_17-59-43: Log_6
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-25_18-01-49: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_18-03-56: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_18-06-02: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_18-08-08: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_18-10-14: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_18-12-20: Log_6
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-25_18-14-26: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-25_18-16-33: Log_2
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-25_18-18-39: Log_3
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OKFAULT NOT CLEARED. FAIL
+2018-04-25_18-20-45: Log_4
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_18-21-14: Log_5
+ Please make sure create a NO FAULT system before testing
+
+2018-04-25_18-21-43: Log_6
+ Please make sure create a NO FAULT system before testing
+
+
+2018-04-26_12-33-25: Log_1
+ Left Speaker DTC List: {'OPEN': '9A0113', 'VBATT': '9A0112', 'LeadToLead': '9A011E', 'GROUND': '9A0111'}
+ Right Speaker DTC List: {'OPEN': '9A0213', 'VBATT': '9A0212', 'LeadToLead': '9A021E', 'GROUND': '9A0211'}
+ Simulate Fault: LSpeaker-VBATT, RSpeaker-VBATT ---> 
+ ===== Fail to read DTC ======
+After clear fault, Spkr Diag happens after 3 cycles
+2018-04-26_13-48-06: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_14-23-53: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 
+2018-04-26_14-38-34: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 
+2018-04-26_15-00-21: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 
+2018-04-26_15-04-15: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 
+2018-04-26_16-11-05: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-04-26_16-14-08: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-26_16-16-14: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-26_16-18-20: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-26_16-20-26: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-26_16-22-33: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-26_16-24-39: Log_6
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-04-26_16-26-45: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-26_16-28-51: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-26_16-30-57: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-26_16-33-04: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-26_16-35-10: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-26_16-37-16: Log_6
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-04-26_16-39-22: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-26_16-41-28: Log_2
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-26_16-43-35: Log_3
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-26_16-45-41: Log_4
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-26_16-47-47: Log_5
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-26_16-49-53: Log_6
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-04-26_16-51-59: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_16-54-06: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_16-56-12: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_16-58-18: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_17-00-24: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_17-02-31: Log_6
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_17-04-37: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-06-43: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-08-49: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-10-55: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-13-02: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-15-08: Log_6
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-17-14: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-26_17-19-20: Log_2
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-26_17-21-26: Log_3
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-26_17-23-33: Log_4
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-26_17-25-39: Log_5
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-26_17-27-45: Log_6
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-04-26_17-29-51: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_17-31-57: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_17-34-04: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_17-36-10: Log_4
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-04-26_17-38-16: Log_5
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OKFAULT NOT CLEARED. FAIL
+2018-04-26_17-40-22: Log_6
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+21 0A 94 77 16 0A 00 00  17-40-28
+ Simulate Fault: Switch-Open ---> null, but get: 100b5902ca916d13LNOT FOUND DTC
+2018-04-26_17-42-28: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-44-35: Log_2
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-46-41: Log_3
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-48-47: Log_4
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-50-53: Log_5
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-52-59: Log_6
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-04-26_17-55-06: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-26_17-57-12: Log_2
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-26_17-59-18: Log_3
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-26_18-01-24: Log_4
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-26_18-03-30: Log_5
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-26_18-05-37: Log_6
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-04-27_16-03-11: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-04-30_08-44-00: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-03_15-02-21: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-03_15-05-05: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-03_15-17-52: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-03_15-29-29: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-03_15-37-56: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 2 DTCs found. 1. Active DTC: C25300	2. Active DTC: 916D11 - SOMETHING WRONG
+2018-05-03_15-46-22: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-03_15-49-13: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 2 DTCs found. 1. Active DTC: C25300	2. Active DTC: 916D11 - SOMETHING WRONG
+2018-05-07_10-10-57: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-07_10-17-01: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-07_10-24-42: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 
+2018-05-07_10-30-03: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-05-07_10-32-59: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 92B711 - NOT FOUND DTC
+2018-05-07_10-35-08: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 3DTCs found. 1. Active DTC: 916D11	2. Active DTC: 92B711	3. Active DTC: 139D79 - SOMETHING WRONG
+2018-05-07_10-55-49: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_11-04-39: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_11-07-51: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_11-16-34: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-05-07_11-18-48: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-05-07_11-21-01: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-05-07_11-23-15: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-05-07_11-25-29: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-05-07_11-27-43: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-05-07_12-44-38: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_12-48-00: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_12-52-49: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_12-56-34: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_12-58-07: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-07_13-00-48: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-05-07_13-03-01: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-05-07_13-05-15: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-05-07_13-07-28: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-05-07_13-09-42: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-05-07_13-11-54: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-05-07_13-14-06: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-05-07_13-16-18: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-05-08_10-54-18: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-05-08_10-56-31: Log_2
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-05-08_10-58-43: Log_3
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-05-08_11-05-52: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-05-08_11-08-04: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-05-08_11-10-17: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-05-08_11-12-31: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-05-08_11-14-45: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-05-08_11-16-59: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-05-08_11-19-13: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-05-08_11-21-27: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-05-08_12-22-01: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-05-08_12-24-15: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Ground ---> 1 Active DTC: 92B711 - OK
+ ======PASS======
+
+2018-05-08_12-26-28: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Ground ---> 1 Active DTC: 9D7911 - OK
+ ======PASS======
+
+2018-05-08_12-28-42: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-VBATT ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-05-08_12-30-55: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-VBATT ---> 1 Active DTC: 92B712 - OK
+ ======PASS======
+
+2018-05-08_12-33-09: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-VBATT ---> 1 Active DTC: 9D7913 - NOT FOUND DTC
+2018-05-08_12-35-22: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Open ---> 1 Active DTC: 916D13 - OK
+ ======PASS======
+
+2018-05-08_12-37-35: Log_1
+ Indicator DTC List: {'OPEN': '92B712', 'VBATT': '92B712', 'GROUND': '92B711'}
+ Simulate Fault: StatusIndc-Open ---> No fault observed
+2018-05-08_12-39-49: Log_1
+ Microphone DTC List: {'VBATT': '9D7912', 'OPEN': '9D7913', 'GROUND': '9D7911'}
+ Simulate Fault: Mic-Open ---> 1 Active DTC: 9D7913 - OK
+ ======PASS======
+
+2018-05-08_12-53-52: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-08_12-58-09: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-08_13-00-32: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-08_13-03-33: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-08_13-04-24: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-08_13-05-00: Log_2
+ Please make sure create a NO FAULT system before testing
+
+2018-05-08_13-05-36: Log_3
+ Please make sure create a NO FAULT system before testing
+
+2018-05-09_11-33-57: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-09_11-36-13: Log_1
+ Please make sure create a NO FAULT system before testing
+
+2018-05-09_11-39-24: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======
+
+2018-05-09_11-44-59: Log_1
+ Switch DTC List: {'PRESS': '916D9E', 'VBATT': '916D13', 'OPEN': '916D13', 'GROUND': '916D11'}
+ Simulate Fault: Switch-Ground ---> 1 Active DTC: 916D11 - OK
+ ======PASS======

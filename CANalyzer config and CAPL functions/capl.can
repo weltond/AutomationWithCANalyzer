@@ -1,0 +1,244 @@
+/*@!Encoding:1252*/
+/*@!Encoding:1252*/
+variables
+{
+  // msTimer ms_timer;
+  msTimer send_second_754_timer;
+  timer send_clear_dtc_timer;
+  msTimer send_0x91_timer;
+  timer initial_timer;
+  timer send_first_754_timer;
+  
+  message CAN2.0x760 d0;
+  message CAN2.0x761 d1;
+  message CAN2.0x762 d2;
+  message CAN2.0x763 d3;
+  message CAN2.0x764 d4;
+}
+
+on message *
+{
+   output(this);
+}
+
+// read created 0x75C messages
+on message 0x75C{
+  output(this);
+  if (this.byte(0) == 01){ // starts with 01. means positive clear DTCs. Do nothing?
+  }
+  if (this.byte(0) == 07){ // starts with 07. means 1 DTC.
+    write("byte(0) should be 10: %x", this.byte(0));
+    d0 = (message CAN2.0x760)this;
+    output(d0);
+  }
+  else if(this.byte(0) == 16){ // starts with 10. means more than 1 DTCs.
+    write("byte(0) should be 10: %x", this.byte(0));
+    d1 = (message CAN2.0x761)this;
+    output(d1);
+  }
+  else if(this.byte(0) == 33) { // starts with 21.
+    write("byte(0) should be 21: %x", this.byte(0));
+    d2 = (message CAN2.0x762)this;
+    output(d2);
+  }
+  else if(this.byte(0) == 34){ // starts with 22.
+    write("byte(0) should be 22: %x", this.byte(0));
+    d3 = (message CAN2.0x763)this;
+    output(d3);
+  }
+  else if(this.byte(0) == 35){ // starts with 23.
+    write("byte(0) should be 23: %x", this.byte(0));
+    d4 = (message CAN2.0x764)this;
+    output(d4);
+  }
+  
+  
+}
+
+
+// An inital timer to make sure Fault Signal is NO after clearing DTC
+On timer initial_timer {
+  write("After 1 seconds");
+}
+
+// send 0x91 to remove the DTC lost comm with RCM.
+On timer send_0x91_timer{
+  message CAN2.0x91 yawMsg;
+  yawMsg.byte(0) = 0;
+  yawMsg.byte(1) = 0;
+  yawMsg.byte(2) = 0;
+  yawMsg.byte(3) = 0;
+  yawMsg.byte(4) = 0;
+  yawMsg.byte(5) = 0;
+  yawMsg.byte(6) = 240; // F0
+  yawMsg.byte(7) = 0;
+  output(yawMsg);
+}
+//on message *{ output(this); }
+
+on start
+{
+  setTimerCyclic(send_0x91_timer, 10);
+  // when boot up, clear DTC once to make sure 0x91 msg is sent to the CAN bus.
+  clearDTC();
+  write("START!!!!!!!!!!!!!");
+  setTimer(initial_timer, 1);
+}
+
+/*********************************/
+/* Clear DTC: send msg 0x754 */
+
+// 03 22 D1 00    Not required? YES
+// # 03: data length | 22: ReadDataByIdentifier | D1 00: Active Diag Session
+
+// 04 14 FF FF FF 
+// # 04: data length | 14: ClearDiagnosticInfo  | FF FF FF: All DTCs
+
+clearDTC(){
+  message CAN2.0x754 clearMsg;
+  clearMsg.byte(0) = 04;
+  clearMsg.byte(1) = 20; 
+  clearMsg.byte(2) = 255;
+  clearMsg.byte(3) = 255;
+  clearMsg.byte(4) = 255;
+  clearMsg.byte(5) = 00;
+  clearMsg.byte(6) = 00;
+  clearMsg.byte(7) = 00;
+  
+  output(clearMsg);
+}
+on timer send_clear_dtc_timer{
+  clearDTC();
+}
+/*********************************/
+
+/*********************************/
+/* TCU RESET: send msg 0x754 */
+
+// 02 11 01 (HEX) to reset
+// 02: Data length | 11: ECUReset | 01: hardReset
+on key 'a'{
+  message CAN2.0x754 resetMsg;
+  resetMsg.byte(0) = 02;
+  resetMsg.byte(1) = 17; // if you want to send 11 in hex, you have to convert it to decimal.
+  resetMsg.byte(2) = 01;
+  resetMsg.byte(3) = 00;
+  resetMsg.byte(4) = 00;
+  resetMsg.byte(5) = 00;
+  resetMsg.byte(6) = 00;
+  resetMsg.byte(7) = 00;
+  output(resetMsg);
+  
+}
+/*********************************/
+
+
+/*********************************/
+/* Read DTC: send msg 0x754 */
+
+// 03 19 02 8F (HEX) : it will get one 0x75C msg, then send the 2nd 0x754 msg below
+//                     to get extra 0x75C msgs if the first bytes of 0x75C is 10.
+// 03: Data length | 19: ReadDTCInfo | 02: reportDTCByStatusMask | 8F: Normal Request Mask for Service & EOL
+
+// 30 (HEX)
+
+// 03 22 D1 00(HEX)     Not required.
+// 03: Data length | 22: ReadDataByIdentifier | D1 00: Active Diagnostic Session
+
+on timer send_second_754_timer{
+  message CAN2.0x754 readDtcMsg2;
+  readDtcMsg2.byte(0) = 48;
+  readDtcMsg2.byte(1) = 00; 
+  readDtcMsg2.byte(2) = 00;
+  readDtcMsg2.byte(3) = 00;
+  readDtcMsg2.byte(4) = 00;
+  readDtcMsg2.byte(5) = 00;
+  readDtcMsg2.byte(6) = 00;
+  readDtcMsg2.byte(7) = 00;
+  output(readDtcMsg2);
+
+  /* Method 1*/
+  // After a period of time, clear DTC. Try to find a better way to get comm from Python
+  // Don't need to clear dtc since this can be operated on every startup.
+   //setTimer(send_clear_dtc_timer, 25);
+}
+
+send_first_readDtcMsg(){
+  message CAN2.0x754 readDtcMsg;
+  
+  readDtcMsg.byte(0) = 03;
+  readDtcMsg.byte(1) = 25; 
+  readDtcMsg.byte(2) = 02;
+  readDtcMsg.byte(3) = 143;
+  readDtcMsg.byte(4) = 00;
+  readDtcMsg.byte(5) = 00;
+  readDtcMsg.byte(6) = 00;
+  readDtcMsg.byte(7) = 00;
+  
+  output(readDtcMsg);
+
+// send the second 0x754 msg after 30ms
+  setTimer(send_second_754_timer, 30);
+}
+
+on timer send_first_754_timer{
+  send_first_readDtcMsg();
+}
+
+on message 0x27E{
+  
+  int flag = 0;
+  if(this.EmgcyCallFalt_B_Dsply == 1){
+    flag = flag + 1;
+  }
+  if(flag == 1){
+    write("27E changed!");
+    
+    // This is to make sure 754 msg is not sent too quickly.
+    // Set to 8s to make sure all DTCs are read. Maybe not enough?
+/* 
+   =====================================================
+     You can always comment this line of code in order to 
+   normally run CANalyzer without testing automation.
+   =====================================================    
+*/
+    //setTimer(send_first_754_timer,10);
+  }else{
+    //write("27E's FaultStatus: %x", this.EmgcyCallFalt_B_Dsply);
+  }
+  output(this);
+}
+/*********************************/
+
+
+
+
+
+on key 'b'{
+  /*
+  message CAN2.0x754 readDtcMsg;
+  readDtcMsg.byte(0) = 03;
+  readDtcMsg.byte(1) = 25; 
+  readDtcMsg.byte(2) = 02;
+  readDtcMsg.byte(3) = 143;
+  readDtcMsg.byte(4) = 00;
+  readDtcMsg.byte(5) = 00;
+  readDtcMsg.byte(6) = 00;
+  readDtcMsg.byte(7) = 00;
+
+  output(readDtcMsg);
+  write("75C:%x", TesterPhysicalResTCU);
+
+// send the second 0x754 msg after 30ms
+  setTimer(send_second_754_timer, 30);
+*/
+  setTimer(send_first_754_timer,1);
+}
+
+testDiag(){
+  write("fuckkkkkkkkkkkkkkkkkk");
+}
+
+t2(){
+  write("got me twice");
+}
