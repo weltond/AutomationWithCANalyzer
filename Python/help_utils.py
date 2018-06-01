@@ -2,15 +2,46 @@ import win32com.client
 import pythoncom
 
 
-def generate_app_marshal():
-    # ???????????????????? THAT"S ENOUGH????????????????????????????????
-    # Only Call CoInitialize()???????????????????????????????????
+# ================== Marshal COM object ==================
+def generate_app_marshal(appl='CANalyzer.Application'):
+    # Only Call CoInitialize()
     pythoncom.CoInitialize()
-    app = win32com.client.DispatchEx('CANalyzer.Application')
+    app = win32com.client.DispatchEx(appl)
     app_id = pythoncom.CoMarshalInterThreadInterfaceInStream(pythoncom.IID_IDispatch, app)
+    # pythoncom.UnCoInitialize()
     return app_id
+# ========================================================
 
 
+# ==================  Converter ======================
+def hex_to_bin(hex_value, num_of_bits=32, scale=16):
+    return bin(int(hex_value, scale))[2:].zfill(num_of_bits)
+
+
+def bin_to_dec(b):
+    return int(b, 2)
+# ====================================================
+
+
+# ===================     Tree View    ========================
+def set_tree_view(script_list, tree):
+    import script_bootup_from_gui as boot
+    for script in script_list:
+        if script.find("SET FAULT") == 0:
+            a, loops = boot.diag_script_para(script)
+            tree.insert_row(str(script), "DIAGNOSTIC", ("", '', '', str(loops)))
+        if script.find("AUTO ECALL STANDBY") == 0:
+            a, b, c, d, loops = boot.auto_standby_script_para(script)
+            tree.insert_row(str(script), "Auto eCall", ("", '', '', str(loops)))
+        if script.find("MANUAL ECALL STANDBY") == 0:
+            tree.insert_row(str(script), "Manual eCall", ("", '', '', ""))
+        if script.find("TEST VTYPE") == 0:
+            tree.insert_row(str(script), "Vehicle Type", ("", '', '', "1"))
+        if script.find("TEST PROP") == 0:
+            tree.insert_row(str(script), "Prop Type", ("", '', '', "1"))
+
+
+# =================== DIAGNOSTIC ========================
 switch_dtc = {'GROUND': r'916D11', 'OPEN': r'916D13', 'VBATT': r'916D13', 'PRESS': r'916D9E'}
 indicator_dtc = {'VBATT': r'92B712', 'GROUND': r'92B711', 'OPEN': r'92B712'}
 mic_dtc = {'OPEN': r'9D7913', 'VBATT': r'9D7912', 'GROUND': r'9D7911'}
@@ -165,12 +196,13 @@ def decode_raw_signal_values(raw_value_dec_list):
     # Tradeoff for maximum of 4 DTCs
     raw_value_hex_list = []
     list_dtcs = []
-
+    if raw_value_dec_list is None:
+        return "List is NULL"
     # 1160619197504508160 (DEC) -> 10 1B 59 02 CA C1 51 00 (HEX)
     # 2552717766254482760 (DEC) -> 23 6d 13 48 95 6d 55 48 (HEX)
     # 529457501042704394  (DEC) ->  7 59 02 ca c1 51 00 0a (HEX)
     for each in raw_value_dec_list:
-        hex_num = decode_raw_signal_value(each)
+        hex_num = decode_raw_signal_value_helper(each)
         raw_value_hex_list.append(hex_num)
 
     head = raw_value_hex_list[0][:2]
@@ -180,7 +212,7 @@ def decode_raw_signal_values(raw_value_dec_list):
     return raw_value_hex_list
 
 
-def decode_raw_signal_value(raw_value):
+def decode_raw_signal_value_helper(raw_value):
 
     # 1160619197504508160 (DEC) -> 10 1B 59 02 CA C1 51 00 (HEX)
     # 2552717766254482760 (DEC) -> 23 6d 13 48 95 6d 55 48 (HEX)
@@ -436,6 +468,15 @@ def wait_and_pump_msg(timeout=5, done_time=5000):
             print( '.', )
             timeTic = time.time()
 
+
+def write_can_to_file(current_can_logs, start_time):
+    with open('dom.txt', 'a+') as f:
+        print("write start!")
+        f.write("\n" + start_time + ":\n ")
+        for line in current_can_logs:
+            f.write(line)
+        # f.write('\n\n')
+        print("write finish!")
 
 if __name__ == "__main__":
     '''
