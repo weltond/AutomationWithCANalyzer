@@ -17,7 +17,8 @@ Main GUI thread. Users can select serial port, type in scripts and start automat
 Communicate with Ford SYNC TDK module through serial.
 3. **loadbox.py**
 Communicate with specially designed PCB board (see also **Arduino** section) through serial.
-![Graphical User Interface](automation-gui.png)
+![Graphical User Interface](new_gui.PNG)
+![Graphical User Interface (OLD)](automation-gui.png)
 
 ### File
 1. **script.txt**
