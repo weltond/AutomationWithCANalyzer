@@ -1,7 +1,5 @@
 /*****************************************************************/
 // component.cpp
-// Alexander Swantek
-// aswantek@ford.com
 // 02/09/2017
 // 
 // Implementation for the class declared in component.h
