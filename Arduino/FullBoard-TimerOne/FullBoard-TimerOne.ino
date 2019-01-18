@@ -1,7 +1,5 @@
 /*****************************************************************/
 // FullSwitch
-// Alexander Swantek
-// aswantek@ford.com
 // 02/09/2017
 // 
 // Implementation for arduino to control relays for eCall fault
